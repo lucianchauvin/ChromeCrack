@@ -1,4 +1,4 @@
-# ChromePasswordYoinker
+# ChromeCrack
 
 *** DISCLAIMER ***
 This is for educational use only and I am not resposible for your use of this code. 
